@@ -503,23 +503,22 @@ site__nav-link:hover::after {
   margin-bottom: 50px;
 }
 
-.client-list {
+.client__list {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-.client-link:not(:last-child) {
+.client__link:not(:last-child) {
   margin-right: 30px;
 }
 
-.client-item {
+.client__item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 90px;
-
   border: 1px solid var(--border);
   border-radius: 4px;
   text-decoration: none;
@@ -528,13 +527,13 @@ site__nav-link:hover::after {
   transition: var(--transition);
 }
 
-.client-item:hover,
-.client-item:focus {
+.client__item:hover,
+.client__item:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
 
-.client-icon {
+.client__icon {
   fill: currentColor;
 }
 
