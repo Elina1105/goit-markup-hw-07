@@ -46,7 +46,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  /* outline: 2px solid tomato; */
+  
 }
 
 /* Шапка сайту  */
@@ -56,7 +56,7 @@ ul {
   display: flex;
 }
 
-.logo-header {
+.header__logo {
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -68,32 +68,48 @@ ul {
   margin-right: 93px;
 }
 
-.logo-web {
+.header__web {
   color: var(--accent-color);
 }
-.logo-studio {
+.header__studio {
   color: var(--totle-text-color);
 }
 
+
+
+
+
 /* ПОСИЛАННЯ */
-.site-nav.list .item:not(:last-child) {
+.site__nav.list .site__nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.link.current{
-  position: relative;
-}
-.link.current::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
 
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  background-color: ;
+.site__nav.list {
+  display: flex;
+  list-style: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.19;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 32px 0;
 }
-.item .link {
+
+.site__nav .site__nav-link:hover::after,
+.site__nav .site__nav-link:focus::after {
+  transform: scaleX(1);
+  color: var(--accent-color);
+}
+.site__nav .site__nav-link:hover,
+.site__nav .site__nav-link:focus {
+  color: var(--accent-color);
+}
+
+.site__nav-item .site__nav-link {
   position: relative;
   padding: 32px 0;
 
@@ -110,17 +126,13 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.item-link:focus,
-.item-link:hover {
-  color: var(--accent-color);
-}
-.item .link::after {
+
+.site__nav-item .site__nav-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-
-border-radius: 2px;
+  border-radius: 2px;
   width: 100%;
   height: 4px;
 
@@ -129,49 +141,39 @@ border-radius: 2px;
   transform: scaleX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.site__nav-link.site__nav-link--current{
+  position: relative;
+}
+.site__nav-link.site__nav-link--current::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-.site-nav.list {
-  display: flex;
-  list-style: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.19;
-  letter-spacing: 0.02em;
-
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 32px 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: ;
 }
 
-.site-nav .link:hover::after,
-.site-nav .link:focus::after {
-  transform: scaleX(1);
-  color: var(--accent-color);
-}
-.link.current::after {
+.site__nav-link.site__nav-link--current::after {
   transform: scaleX(1);
   transition: var(--transition);
 }
-link:hover::after {
+site__nav-link:hover::after {
   transform: scaleX(1);
   color: var(--accent-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
 /* Навігація по авторизації портфоліо */
 
-.nav-autho {
+.header__nav {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-.adress-header.link {
+.header__nav-adress.header__nav-link {
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
@@ -186,24 +188,15 @@ link:hover::after {
   transition: var(--transition);
 }
 
-.adress-header.link:hover,
-.adress-header.link:focus {
+.header__nav-adress.header__nav-link:hover,
+.header__nav-adress.header__nav-link:focus {
   color: var(--accent-color);
   transition: var(--transition);
 }
 
-.button-icon {
+.header__nav-icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.header-link .link {
-  padding: 32px 0px;
-}
-
-.adress-link.number {
-  text-decoration: none;
-  color: var(--other-text-color);
 }
 
 /* HERO */
@@ -776,54 +769,16 @@ color: #ffffff;
 
 /* СТОРІНКА ПОРТФОЛІО */
 
-/*  Шапка сайту  */
+/*  ШАПКА САЙТУ */
 
-
-
-/* Навігація сайту */
 .header.container.border{
   border-bottom: 2px solid var(--secondary-bgc);
 }
-
-.logo-portfolio {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  /* identical to box height */
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  margin-right: 93px;
-}
-
+/* Навігація сайту */
 /* ПОСИЛАННЯ */
 
-.site-nav.portfolio {
-  display: flex;
 
-  list-style: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.19;
-  letter-spacing: 0.02em;
 
-  text-decoration: none;
-  cursor: pointer;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.site-nav .link {
-  color: var(--totle-text-color);
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
 
 /* Навігація по авторизації портфоліо */
 
@@ -979,7 +934,7 @@ color: #ffffff;
   margin-bottom: 0px;
 }
 
-}
+
 /* FOOTER PORTFOLIO */
 
 .header .border {

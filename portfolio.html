@@ -13,40 +13,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="./css/portfolio.min.css">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Шапка сайту -->
+    <!-- ШАПКА САЙТУ-->
     <header>
       <!-- Навігація сайту -->
       <div class="header container border">
-        <a href="" class="logo-portfolio">
-          <span class="logo-web">Web</span
-          ><span class="logo-studio">Studio</span>
+       <a href="#" class="header__logo">
+          <span class="header__web">Web</span
+          ><span class="header__studio">Studio</span>
         </a>
         <nav>
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link">Студия</a>
+          <ul class="site__nav list">
+            <li class="site__nav-item">
+              <a href="./index.html" class="site__nav-link">Студия</a>
             </li>
-            <li class="item">
-              <a href="" class="link current">Портфолио</a>
+            <li class="site__nav-item">
+              <a href="" class="site__nav-link site__nav-link--current">Портфолио</a>
             </li>
-            <li class="item">
-              <a href="" class="link">Контакты</a>
+            <li class="site__nav-item">
+              <a href="" class="site__nav-link">Контакты</a>
             </li>
           </ul>
         </nav>
         <!-- Навігація по авторизації портфоліо -->
-        <div class="nav-autho">
-          <a href="info@devstudio.com" class="adress-header link">
-            <svg class="button-icon" height="12" width="16">
+        <div class="header__nav">
+          <a href="info@devstudio.com" class="header__nav-adress header__nav-link">
+            <svg class="header__nav-icon" height="12" width="16">
               <use href=".//images/sprite.svg#envelope"></use>
             </svg>
             info@devstudio.com</a
           >
-          <a href="" class="adress-header link">
-            <svg class="button-icon" height="16" width="10">
+          <a href="" class="header__nav-adress header__nav-link">
+            <svg class="header__nav-icon" height="16" width="10">
               <use href=".//images/sprite.svg#vector"></use>
             </svg>
             +38 096 111 11 11</a
