@@ -120,7 +120,7 @@ ul {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 }
 
 .site__nav-item .site__nav-link::after {
@@ -135,7 +135,7 @@ ul {
   background: var(--accent-color);
   /* (ефект вжимання) */
   transform: scaleX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 }
 .site__nav-link.site__nav-link--current{
   position: relative;
@@ -1074,7 +1074,7 @@ font-family: Roboto;
 }
 
 /* ЧЕКБОКС */
-.checkbox__container {
+.checkbox {
   position: relative;
   margin-bottom: 30px;
   padding-left: 36px;
