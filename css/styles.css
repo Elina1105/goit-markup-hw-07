@@ -686,7 +686,7 @@ height: 50px;
 outline: transparent;
 
   background-color: inherit;
-  color: black;
+  color: white;
 }
 footer__form-input::placeholder{
 
@@ -743,21 +743,8 @@ font-family: Roboto;
 .header.container.border{
   border-bottom: 2px solid var(--secondary-bgc);
 }
-/* Навігація сайту */
-/* ПОСИЛАННЯ */
 
-
-
-
-/* Навігація по авторизації портфоліо */
-
-.adress-link.number {
-  color: var(--other-text-color);
-}
-
-/* MAIN PORTFOLIO */
-
-/* Кнопки  по сторінці портфоліо*/
+/* КНОПКИ ПО СТОРІНЦІ ПОРТФОЛІО*/
 /* Кнопки */
 
 .section.portfolio {
@@ -771,11 +758,11 @@ font-family: Roboto;
   justify-content: center;
 }
 
-.button-list:not(:last-child) {
+.buttons_list:not(:last-child) {
   margin-right: 8px;
 }
 
-.button {
+.buttons_button {
   padding: 6px 22px;
   cursor: pointer;
   border-radius: 4px;
@@ -792,8 +779,8 @@ font-family: Roboto;
   transition: var(--transition);
 }
 
-.button:hover,
-.button:focus {
+.buttons_button:hover,
+.buttons_button:focus {
   color: var(--primary-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -802,7 +789,7 @@ font-family: Roboto;
 
 /* КАРТКИ */
 
-.portfolio-card {
+.portfolio_card {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -812,11 +799,11 @@ font-family: Roboto;
   cursor: pointer;
 }
 
-.portfolio-card .item {
+.portfolio_card .portfolio_item {
   margin: 30px 0 0 30px;
 }
 
-.item-link {
+.portfolio_link {
   display: block;
   text-decoration: none;
   color: var(--totle-text-color);
@@ -824,37 +811,37 @@ font-family: Roboto;
   transition: var(--transition);
 }
 
-.item-link:focus,
-.item-link:hover {
+.portfolio_link:focus,
+.portfolio_link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: var(--transition);
 }
 
-.img-portfolio {
+.portfolio_img {
   width: 100%;
   display: block;
 }
 
-.item-link {
+.portfolio_link {
   position: relative;
 }
 
-.class1 {
+.portfolio_top {
   position: relative;
   overflow: hidden;
 }
 
-.item-link:hover .class2,
-.item-link:focus .class2 {
+.portfolio_link:hover .portfolio_action,
+.portfolio_link:focus .portfolio_action {
   opacity: 1;
 }
 
-.item-link:hover .class2,
-.item-link:focus .class2 {
+.portfolio_link:hover .portfolio_action,
+.portfolio_link:focus .portfolio_action {
   transform: translateY(0);
 }
-.class2 {
+.portfolio_action {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -876,16 +863,16 @@ font-family: Roboto;
   transition-property: transform;
   transition: var(--transition);
 }
-.class3 {
+.portfolio_info {
   margin: 0;
 }
 
-.card-name {
+.portfolio_card-name {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 
-.portfolio-card .title {
+.portfolio_card .portfolio_title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -893,7 +880,7 @@ font-family: Roboto;
   margin-top: 0px;
   margin-bottom: 4px;
 }
-.portfolio-card .text {
+.portfolio_card .portfolio_text {
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.87;
@@ -955,7 +942,7 @@ font-family: Roboto;
 
   transition: transform var(--transition);
 }
-.button-modal {
+.modal__button{
   position: absolute;
   top: 8px;
   right: 8px;
@@ -974,21 +961,19 @@ font-family: Roboto;
   transition: color var(--transition);
 }
 
-.button-modal :hover,
-.button-modal :focus {
+.modal__button :hover,
+.modal__button :focus {
   fill: #2196f3;
 }
-.modal-icon {
-  fill: currentColor;
-}
 
-.form {
+
+.modal__form {
   margin: 40px;
   cursor: pointer;
   position: relative;
 }
 
-.form-title {
+.modal__title {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -999,12 +984,12 @@ font-family: Roboto;
   color: #212121;
 }
 
-.form-label {
+.modal__label {
   display: block;
   /* position: absolute; */
   margin-bottom: 10px;
 }
-.lable-content {
+.modal__content {
   display: block;
   height: 14px;
   margin-bottom: 4px;
@@ -1014,16 +999,15 @@ font-family: Roboto;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
-
   letter-spacing: 0.01em;
 
   color: #757575;
 }
 
-.input-container {
+.modal__container {
   position: relative;
 }
-.form-input {
+.modal__input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -1036,12 +1020,13 @@ font-family: Roboto;
   outline: transparent;
   transition: border-color var(--transition);
 }
-.form-input:focus {
+.modal__input:focus,
+.modal__input:hover {
   border-color: #2196f3;
   cursor: pointer;
 }
 
-.icon-form {
+.modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -1054,23 +1039,26 @@ font-family: Roboto;
   transition: fill var(--transition);
 }
 
-.form-input:focus + .icon-form {
+.modal__input:focus,
+.modal__input:hover + .modal__icon {
   fill: #2196f3;
 }
-
-.comment-text {
+ /* КОМЕНТАРІЙ */
+.comment {
+  margin-bottom: 20px;
+  display: block;
+}
+.comment__text {
   padding: 12px 16px;
   width: 100%;
   height: 120px;
   resize: none;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   outline: transparent;
 }
-
-.comment-text::placeholder {
+.comment__text::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -1080,21 +1068,19 @@ font-family: Roboto;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment-text:focus {
+.comment__text:focus,
+.comment__text:hover {
   border: 1px solid #2196f3;
 }
-.comment {
-  margin-bottom: 20px;
-  display: block;
-}
 
-.checkbox-container {
+/* ЧЕКБОКС */
+.checkbox__container {
   position: relative;
   margin-bottom: 30px;
   padding-left: 36px;
 }
 
-.checkbox-icon {
+.checkbox__icon {
   height: 24px;
 
   font-family: Roboto;
@@ -1106,7 +1092,7 @@ font-family: Roboto;
   color: #757575;
 }
 
-.checkbox-label::after {
+.checkbox__label::after {
   content: "";
   position: absolute;
   left: 12px;
@@ -1118,22 +1104,18 @@ font-family: Roboto;
 
   width: 16px;
   height: 15px;
-
   background-color: #ffffff;
   border:2px solid #212121;
   border-radius: 4px;
-
-  
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-
   transition: background-color var(--transition), border-color var(--transition);
 }
-.checkbox-input:focus + .checkbox-label::after {
+.checkbox__input:focus + .checkbox__label::after {
 }
 
-.checkbox-input:checked + .checkbox-label::after {
+.checkbox__input:checked + .checkbox__label::after {
   background-color: #2196f3;
   background-image: url("../images/checkbox.svg");
   border-color:#2196f3 ;
@@ -1143,16 +1125,16 @@ font-family: Roboto;
  
 }
 
-.checkbox-input:checked ~ .checkbox-label {
+.checkbox__input:checked ~ .checkbox__label {
   background-color;
 }
-.checkbox-link {
+.checkbox__link {
   color: #2196f3;
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
 
-.submit-button {
+.checkbox__button {
   display: block;
   width: 200px;
   height: 50px;
@@ -1164,7 +1146,6 @@ font-family: Roboto;
   border-color: rgba(255, 255, 255, 0);
   outline: transparent;
   border-style: none;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
